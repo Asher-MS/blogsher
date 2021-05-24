@@ -21,6 +21,7 @@ urlpatterns = [
     
     
     path(r'',views.articleslist,name="list"),
+    path(r'create/',views.article_create,name="create"),
     path('<slug:slug>',views.article_detail)
     
 ]
