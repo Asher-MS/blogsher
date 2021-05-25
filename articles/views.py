@@ -27,6 +27,9 @@ def article_create(req):
         form=forms.CreateArticle(req.POST,req.FILES)
         if(form.is_valid):
             #Save this to the Database
+            article=Article()
+            article=form
+            article.save()
             return(redirect("articles:list"))
 
     else:
